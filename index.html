@@ -53,9 +53,20 @@ and the Isle of Man from 1098 to 1266.
     <script>
         var map;
         function initMap() {
+            var map_center = { lat: 59.911111, lng: 10.752778 };
             map = new google.maps.Map(document.getElementById('themap'), {
-                center: { lat: 59.911111, lng: 10.752778 },
+                center: map_center,
                 zoom: 12
+            });
+            var marker1 = new google.maps.Marker({
+                position: { lat: 58.911111, lng: 10.752778 },
+                label: "A",
+                map: map
+            });
+            var marker2 = new google.maps.Marker({
+                position: { lat: 59.811111, lng: 11.752778 },
+                label: "B",
+                map: map
             });
         }
 
