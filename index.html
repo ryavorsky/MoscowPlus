@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
+    <title>Norway Map</title>
     <meta charset="utf-8">
     <style>
       html, body {
@@ -10,21 +9,53 @@
         margin: 0;
         padding: 0;
       }
-      #map {
-        height: 100%;
+      td
+      {
+          font-size: 24px;
+       }
+      #themap {
+        width: 700px;
+        height:500px;
       }
     </style>
   </head>
   <body>
-    
-    <div id="map" style="width: 300px;height:300px;"></div>
-    <script>
+    <h1>Norway - forever!</h1>
 
+    <table>
+    <tr>
+      <td width="40%">
+      <p>
+Norway, officially the Kingdom of Norway, is a sovereign and unitary monarchy 
+whose territory comprises the western portion of the Scandinavian Peninsula plus 
+Jan Mayen and the Arctic archipelago of Svalbard.
+</p>
+<p>The Antarctic Peter I Island and the sub-Antarctic Bouvet Island are dependent 
+territories and thus not considered part of the Kingdom. Norway also lays claim 
+to Queen Maud Land, a territory which is larger than Greenland, more than seven 
+times the size of Norway proper, and about one-fifth of the Antarctic landmass. 
+On most maps there had been an unclaimed area between Queen Maud Land and the 
+South Pole until June 12, 2015 when Norway formally annexed[10] that area.[11] 
+Until 1814, the Kingdom included the Faroe Islands (since 1035), Greenland (1261), 
+and Iceland (1262), which was lost through the Treaty of Kiel. 
+</p>
+<p>
+The Kingdom also included Shetland and Orkney until 1468, as well as the Hebrides 
+and the Isle of Man from 1098 to 1266.
+</p>
+</td>
+      <td width="60%"> <div id="themap"></div> </td>
+    </tr>
+    </table>
+    
+
+
+    <script>
         var map;
         function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: -34.397, lng: 150.644 },
-                zoom: 8
+            map = new google.maps.Map(document.getElementById('themap'), {
+                center: { lat: 59.911111, lng: 10.752778 },
+                zoom: 12
             });
         }
 
