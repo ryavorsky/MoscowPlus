@@ -1,0 +1,18 @@
+from urllib import request
+#скачиваем файл
+#for e in (range(11)):
+#   request.urlretrieve('http://lycuz2.mskobr.ru/novosti/?p={}'.format(e), 'd://PythonProject/test{}.html'.format(e)) 
+#находим ссылки на новости
+results = set()
+
+for e in range(11):
+    html=open('d://PythonProject/test{}.html'.format(e), "r", encoding="UTF8")
+    content = html.read().split('"')
+    for line in content:
+        if line.startswith("/novosti/"):
+            results.add(line)
+i=0
+for newsurl in results:
+    request.urlretrieve('http://lycuz2.mskobr.ru/' + newsurl, 'd://PythonProject/news{}.html'.format(i))
+    i+=1
+    
